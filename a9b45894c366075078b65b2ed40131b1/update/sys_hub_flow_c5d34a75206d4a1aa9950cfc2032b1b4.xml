@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>timeFromCreateToActivate=1120000</attributes>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>When a placement drive status changes to Open, notify eligible students via email.</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source>fluent</generation_source>
+        <internal_name>placement_drive_published_notification</internal_name>
+        <label_cache>[{"name":"a2796868-1a89-4705-afe7-86f2e399ccb8.Records","label":"a2796868-1a89-4705-afe7-86f2e399ccb8➛Records","type":"records","base_type":"records","column_name":"Records","usedInstances":{"97f2a735-a5ce-4e71-8d22-076b3b52c868":["items"]},"attributes":{}},{"name":"Updated_1.current.drive_title","label":"Trigger - Record Updated➛x_1983287_cptms_drive Record➛Drive Title","type":"string","base_type":"string","usedInstances":{"7716f824-5764-4772-86c4-0408600c3f88":["ah_subject"]},"attributes":{}},{"name":"Updated_1.current.company.company_name","label":"Trigger - Record Updated➛x_1983287_cptms_drive Record➛Company➛Company Name","type":"string","base_type":"string","usedInstances":{"7716f824-5764-4772-86c4-0408600c3f88":["ah_subject"]},"attributes":{}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛x_1983287_cptms_drive Record","type":"reference","base_type":"reference","usedInstances":{"7716f824-5764-4772-86c4-0408600c3f88":["record"]},"attributes":{}},{"name":"97f2a735-a5ce-4e71-8d22-076b3b52c868.item.student_user.email","label":"2 - For Each - ➛item➛Student User➛Email","type":"string","base_type":"string","usedInstances":{"7716f824-5764-4772-86c4-0408600c3f88":["ah_to"]},"attributes":{}}]</label_cache>
+        <master_snapshot>15492818c32a075078b65b2ed40131a9</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Placement Drive Published Notification</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>136de414c36a075078b65b2ed401311f</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:27:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c5d34a75206d4a1aa9950cfc2032b1b4</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Placement Drive Published Notification</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CPTMS" source="x_1983287_cptms">a9b45894c366075078b65b2ed40131b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name>sys_hub_flow_c5d34a75206d4a1aa9950cfc2032b1b4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:13</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=c5d34a75206d4a1aa9950cfc2032b1b4"/>
+    <sys_variable_value action="delete_multiple" query="document_key=c5d34a75206d4a1aa9950cfc2032b1b4"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1983287_cptms_drive">status=open<item endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="open"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>136de414c36a075078b65b2ed401311f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:13</sys_updated_on>
+        <table>x_1983287_cptms_drive</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>c5d34a75206d4a1aa9950cfc2032b1b4</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:13</sys_created_on>
+        <sys_id>1f6de414c36a075078b65b2ed401311f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:13</sys_updated_on>
+        <trigger display_value="">136de414c36a075078b65b2ed401311f</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=c5d34a75206d4a1aa9950cfc2032b1b4^sys_idNOT IN1f6de414c36a075078b65b2ed401311f"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=c5d34a75206d4a1aa9950cfc2032b1b4"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=c5d34a75206d4a1aa9950cfc2032b1b4"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=c5d34a75206d4a1aa9950cfc2032b1b4^sys_idNOT IN1e6d2414c36a075078b65b2ed401313a,5e6d2414c36a075078b65b2ed4013159,666d2414c36a075078b65b2ed40131b0"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Placement Drive Published Notification">c5d34a75206d4a1aa9950cfc2032b1b4</model>
+        <model_id>c5d34a75206d4a1aa9950cfc2032b1b4</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_c5d34a75206d4a1aa9950cfc2032b1b4</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:09</sys_created_on>
+        <sys_id>1e6d2414c36a075078b65b2ed401313a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:09</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1e6d2414c36a075078b65b2ed401313a"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,timeFromCreateToActivate=20000,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Placement Drive Published Notification">c5d34a75206d4a1aa9950cfc2032b1b4</model>
+        <model_id>c5d34a75206d4a1aa9950cfc2032b1b4</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_c5d34a75206d4a1aa9950cfc2032b1b4</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:09</sys_created_on>
+        <sys_id>5e6d2414c36a075078b65b2ed4013159</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:09</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=5e6d2414c36a075078b65b2ed4013159"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Placement Drive Published Notification">c5d34a75206d4a1aa9950cfc2032b1b4</model>
+        <model_id>c5d34a75206d4a1aa9950cfc2032b1b4</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_c5d34a75206d4a1aa9950cfc2032b1b4</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:10</sys_created_on>
+        <sys_id>666d2414c36a075078b65b2ed40131b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:10</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=666d2414c36a075078b65b2ed40131b0"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=c5d34a75206d4a1aa9950cfc2032b1b4"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c5d34a75206d4a1aa9950cfc2032b1b4"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=c5d34a75206d4a1aa9950cfc2032b1b4^sys_idNOT IN473973ce043448aaa1f9827149cfb93f"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Placement Drive Published Notification">c5d34a75206d4a1aa9950cfc2032b1b4</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:27:31</sys_created_on>
+        <sys_id>473973ce043448aaa1f9827149cfb93f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:10</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+1Y32/TMBD+V6I8gVSkAQ/A3oAxqdJgEivwMFDk2pfWwrWLfWkXpv3vnPOj9ZJ0y8bCQOypzdnxfXf3fWc7p+cxWjmbgR1rh0xzOMndWMT7cTyKFZuCor8TNlVAz1IjWM3UJF8CmdGbE80WfkzAErQAjeWrfG4khyPp6Pn02yheMC0YGpvH+2gzGMWpNYsJLJaKIa2VMuXIaKwAG+8/3dsbxcW6lRNacMVU5p/PkqevXj5/9vJFwpe4cImwclX4l47Wyj9fM43PpRIWdIlqySx5Qe/zvBVtAwB2BF3hJbRwhj58sQklCLiyWGDiWKs8mHLm5E8o3s8cJEEKqxnpydysP0IKhJjDodSFu2pQGc7U5okh1XGaITiK5eJik5BDCaoqp+NWLvE1R5+K8r2LUZ/6f8x09GUOOvrkwEZFUVtkmCkpIFHlWH8y1IFex4ai/AG0qjg208makCWUP1t7r6nSZkU/AnSGe5VD7EjB30qNmImVL7PPo1diPBRXTsA5afwvotSzNmNKVlzDlnMKFH5kPsYiGWldymIxVuIj81Hl3mcx8hhSY8v6jbcTa0z+hfGCzSpKkAcFHIMKpfRm8PRe0msUwjYPO0Bpo5M+wD4Y/eRP4poanIdgahxvyH4pQcTMXeDcb6K7ne6bsnMbNq0ux9ZQemW9idrbhN3tHBsU/p/VniqzJhLdtcCZzluU9Z6kJpbmETfk7AwHkwzJA2bWZFrsQnF5xjC6Zfz71SC2M6JHAlKWKXx830L12KgNhhoN42gqNRzrqdct5TrdPqhzm6pjHb2rgo6Kk627a6EWyBv0pDbKM0vpwGJLqdMeYY1gINH68TYW2nkDQPWB/l41QgeFDRe3OqnxNyRSm3uqo7PkO30/iKXM3FujhcTyFNbURz3kBrnbVKXhAYCaEIQWM/c129t7Lgz5bXOjY0YPmoTBdrjHjrgH40X1PeC2tFgzjS5BkzAhkgDxpjEtjAB1EFSt4gLtFcsMXXwR1JS0sbnyD3mHHuhS1HVmomO+Py/5++pgfddoSEzaed2RaVQlh7rRNI9wDoRJ0V5NKxeohtsOtPEFbUI7MBENRPaPgLubW0/xsaF99SnL3WgIpfHGnzl233oazh/2i236JuWsu5ZxpiWZEz5nelaelmruHpKagfF5VE6JyikD6po3PmLw4ZzBCmzeCtYbo2wpvFSG8szUmuWu1b6oO/hGUZ0byUCS0KUI7q0l1HuXQ0szZ3nQDVqsaTSG1njPHrEl+W4M/0pT6N8Dvv0CqekG8xoZAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=c5d34a75206d4a1aa9950cfc2032b1b4^sys_idNOT IN7716f8245764477286c40408600c3f88,a27968681a894705afe786f2e399ccb8"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="">c1806bf4a70323008299b39f087901cb</action_type_parent>
+        <attributes>timeFromCreateToActivate=20000</attributes>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Placement Drive Published Notification">c5d34a75206d4a1aa9950cfc2032b1b4</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>97f2a735-a5ce-4e71-8d22-076b3b52c868</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:27:32</sys_created_on>
+        <sys_id>7716f8245764477286c40408600c3f88</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:11</sys_updated_on>
+        <ui_id>7716f824-5764-4772-86c4-0408600c3f88</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7716f8245764477286c40408600c3f88"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="">43400a1587003300663ca1bb36cb0b4b</action_type_parent>
+        <attributes>timeFromCreateToActivate=20000</attributes>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Placement Drive Published Notification">c5d34a75206d4a1aa9950cfc2032b1b4</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:27:32</sys_created_on>
+        <sys_id>a27968681a894705afe786f2e399ccb8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:10</sys_updated_on>
+        <ui_id>a2796868-1a89-4705-afe7-86f2e399ccb8</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VXW2+bMBT+K5GfUQQhSdO+Ta0qTVpbqa360k2WAZNYM4bZJpdG+e87toGwhPSypVKrPXKu3zn+zrF5XCNBMorOUJyLhGmWC4U8NCe8NEISazan30vfDxMtQeShhKmCk9XDYYuCSAipqURnaxTPGE8kFejs8YeHWAIuk3To+yQYTU7AKfT98TiMSRBF4TiO/GjkQwhOIsrB9LwNqguoXhWdsm9dAXKZGFCBh+hSU5FQQJMSrqiHMiISonO5aiSSkuRG8K1gxoSGiMgYLxV7grxQh28sUwoVxtRpm09ctcqJ0wuiyR20KNalrEzjWc5iqlxvEpqSkuvztswZ3BSmAueiScRr75yXmbh2XUFNgPpkQFIqAEELU6rBbs4HgNzN8sVtDfKSCduUqkiex4Q3X0RryaJSGzhrRDnNIA7OSFEwMcWFzOfMOgOUrD/l8NFPeb6AnIpNRd9wIxd9aCzpX4L8woofiGSmiCsIA84bD6mVOudEqW0p0EP8qzRIXGFVCdh2wbXA+MWSFfqLZWCFeeM1hHZmWy4vcXA6CQeTExwXOlNY6dK2ZY/Shw3/jdnDqMXs+wrdDtiKz/YTW92ffLZuvWunqPjsH43Pk8/E5qqMD0ZnAMQ4MAS7I1R5KW0r5zjmpbIKSYRysf6C/C/zXuVSY8ujLfetjKi4Y3/3dN57egW3/ee39mmL23eQrXfvEHSAqne2ZcPuvq6FFbfDo3E7HByH2+umzKZ1HV2uR9OcS23/ZOzJrj2Qq+UQbLpm5005g7fmHGz2ZzN803C26eU0FwdYduQZThOcMsoTzARnwm5O9wZ5t+FO8Axcq3zYTSJesGRK9TZ7bZXkekH4zy59xThcH5Qt7132AUwAllTBobRfdiPf318GTvjSJhg+uwnGQWsTXJFl77bJ3Qmo2gYwsHRqW9xeB18bacXV4RHfbh/2rgt8dzidoxR4TvspbsN3u99cB/cZ/Ar6xifPXmSjFn1vDOl60WrnHmuSV9x1K6jjtXZpFDuvtcH/+Vr7kP8e3qEL5Mg/JT9+A1y1uDNnDwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a27968681a894705afe786f2e399ccb8"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=c5d34a75206d4a1aa9950cfc2032b1b4"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=c5d34a75206d4a1aa9950cfc2032b1b4^sys_idNOT IN97f2a735a5ce4e718d22076b3b52c868"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes>timeFromCreateToActivate=20000</attributes>
+        <block display_value="">11492818c32a075078b65b2ed401311c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Placement Drive Published Notification">c5d34a75206d4a1aa9950cfc2032b1b4</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:27:32</sys_created_on>
+        <sys_id>97f2a735a5ce4e718d22076b3b52c868</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:11</sys_updated_on>
+        <ui_id>97f2a735-a5ce-4e71-8d22-076b3b52c868</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51Ty27bMBD8F55tQY9UlnwLEgQI0DaAE+RSBMaKXNlEKVIlKTuq4H/v0nokyLEnaYe7szMjamCm823n3Yu5dU4eNNv+elsxqQNG7wPT0CDbMumxcWzFTqC6UA8DpJsyL/JinUBRrm828bc11LhZF3mdYlaWnFdFtENurHCXC40K6VoF/ev/M7RgSY1Hy7YD40ephMVZsSDKpBR1mcQlz9I8S+M4LW6SKs+qJBUZoMiJQkGFilofJz9f7Pm+DaUdl07A92lmt6D0CCLSeMXw3aMWSOtrUA5XrAEtwBvbs623HQEWQTxp1S8dR6k90bHQ++7kX9qYxHForJEMcRwPl3I/JTfC9T14eCZq7js7tfKjkRzdGIXAGjrl7z5jY8NT66XR44iHSs3TRnWN/jkmwRaC+UMR0jkSgW0wGqRPPurnoznvZpUPUl9DmQ6V4aCWCry3sup80DMwVNgQ0b6BtpX6sG+tOcnrMGlpooOiIqqVOdPScCkj4EF4RLlC9ED4/RV+BSuDix9EQ8OXFXO9u1Pg3IcXCnH/pwtKRmeTh/0YQxjhVrb+lhaccJJ7eQv3fOReMuXSkYSXgD3Of0c46OkGSf4ZOhv7O4j/wC7/AMruuSNnAwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=c5d34a75206d4a1aa9950cfc2032b1b4"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=c5d34a75206d4a1aa9950cfc2032b1b4"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c5d34a75206d4a1aa9950cfc2032b1b4</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:09</sys_created_on>
+        <sys_id>5e6d2414c36a075078b65b2ed4013148</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CPTMS" source="x_1983287_cptms">a9b45894c366075078b65b2ed40131b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:09</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c5d34a75206d4a1aa9950cfc2032b1b4</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:10</sys_created_on>
+        <sys_id>926d2414c36a075078b65b2ed4013161</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CPTMS" source="x_1983287_cptms">a9b45894c366075078b65b2ed40131b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:10</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c5d34a75206d4a1aa9950cfc2032b1b4</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:10</sys_created_on>
+        <sys_id>a66d2414c36a075078b65b2ed40131b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CPTMS" source="x_1983287_cptms">a9b45894c366075078b65b2ed40131b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:10</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_c5d34a75206d4a1aa9950cfc2032b1b4"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_c5d34a75206d4a1aa9950cfc2032b1b4"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>timeFromCreateToActivate=20000</attributes>
+        <authored_on_release_version>-1</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>When a placement drive status changes to Open, notify eligible students via email.</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>placement_drive_published_notification</internal_name>
+        <label_cache>[{"name":"a2796868-1a89-4705-afe7-86f2e399ccb8.Records","label":"a2796868-1a89-4705-afe7-86f2e399ccb8➛Records","type":"records","base_type":"records","column_name":"Records","usedInstances":{"97f2a735-a5ce-4e71-8d22-076b3b52c868":["items"]},"attributes":{}},{"name":"Updated_1.current.drive_title","label":"Trigger - Record Updated➛x_1983287_cptms_drive Record➛Drive Title","type":"string","base_type":"string","usedInstances":{"7716f824-5764-4772-86c4-0408600c3f88":["ah_subject"]},"attributes":{}},{"name":"Updated_1.current.company.company_name","label":"Trigger - Record Updated➛x_1983287_cptms_drive Record➛Company➛Company Name","type":"string","base_type":"string","usedInstances":{"7716f824-5764-4772-86c4-0408600c3f88":["ah_subject"]},"attributes":{}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛x_1983287_cptms_drive Record","type":"reference","base_type":"reference","usedInstances":{"7716f824-5764-4772-86c4-0408600c3f88":["record"]},"attributes":{}},{"name":"97f2a735-a5ce-4e71-8d22-076b3b52c868.item.student_user.email","label":"2 - For Each - ➛item➛Student User➛Email","type":"string","base_type":"string","usedInstances":{"7716f824-5764-4772-86c4-0408600c3f88":["ah_to"]},"attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>Placement Drive Published Notification</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Placement Drive Published Notification">c5d34a75206d4a1aa9950cfc2032b1b4</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:28:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>15492818c32a075078b65b2ed40131a9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:13</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=15492818c32a075078b65b2ed40131a9"/>
+    <sys_variable_value action="delete_multiple" query="document_key=15492818c32a075078b65b2ed40131a9"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=15492818c32a075078b65b2ed40131a9"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=15492818c32a075078b65b2ed40131a9^sys_idNOT IN55492818c32a075078b65b2ed40131aa"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>15492818c32a075078b65b2ed40131a9</id>
+        <name>Placement Drive Published Notification</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:28:04</sys_created_on>
+        <sys_id>55492818c32a075078b65b2ed40131aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:28:04</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=55492818c32a075078b65b2ed40131aa"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=15492818c32a075078b65b2ed40131a9^sys_idNOT IN766d6414c36a075078b65b2ed40131e4,766da414c36a075078b65b2ed401310e,8b6da414c36a075078b65b2ed4013126"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Placement Drive Published Notification">15492818c32a075078b65b2ed40131a9</model>
+        <model_id>15492818c32a075078b65b2ed40131a9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_15492818c32a075078b65b2ed40131a9</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:11</sys_created_on>
+        <sys_id>766d6414c36a075078b65b2ed40131e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:11</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=766d6414c36a075078b65b2ed40131e4"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,timeFromCreateToActivate=20000,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Placement Drive Published Notification">15492818c32a075078b65b2ed40131a9</model>
+        <model_id>15492818c32a075078b65b2ed40131a9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_15492818c32a075078b65b2ed40131a9</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:12</sys_created_on>
+        <sys_id>766da414c36a075078b65b2ed401310e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=766da414c36a075078b65b2ed401310e"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Placement Drive Published Notification">15492818c32a075078b65b2ed40131a9</model>
+        <model_id>15492818c32a075078b65b2ed40131a9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_15492818c32a075078b65b2ed40131a9</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:12</sys_created_on>
+        <sys_id>8b6da414c36a075078b65b2ed4013126</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8b6da414c36a075078b65b2ed4013126"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=15492818c32a075078b65b2ed40131a9"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=15492818c32a075078b65b2ed40131a9"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=15492818c32a075078b65b2ed40131a9^sys_idNOT IN29496818c32a075078b65b2ed4013146"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Placement Drive Published Notification">15492818c32a075078b65b2ed40131a9</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:28:05</sys_created_on>
+        <sys_id>29496818c32a075078b65b2ed4013146</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:28:05</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+1Y32/TMBD+V6I8gVSkAQ/A3oAxqdJgEivwMFDk2pfWwrWLfWkXpv3vnPOj9ZJ0y8bCQOypzdnxfXf3fWc7p+cxWjmbgR1rh0xzOMndWMT7cTyKFZuCor8TNlVAz1IjWM3UJF8CmdGbE80WfkzAErQAjeWrfG4khyPp6Pn02yheMC0YGpvH+2gzGMWpNYsJLJaKIa2VMuXIaKwAG+8/3dsbxcW6lRNacMVU5p/PkqevXj5/9vJFwpe4cImwclX4l47Wyj9fM43PpRIWdIlqySx5Qe/zvBVtAwB2BF3hJbRwhj58sQklCLiyWGDiWKs8mHLm5E8o3s8cJEEKqxnpydysP0IKhJjDodSFu2pQGc7U5okh1XGaITiK5eJik5BDCaoqp+NWLvE1R5+K8r2LUZ/6f8x09GUOOvrkwEZFUVtkmCkpIFHlWH8y1IFex4ai/AG0qjg208makCWUP1t7r6nSZkU/AnSGe5VD7EjB30qNmImVL7PPo1diPBRXTsA5afwvotSzNmNKVlzDlnMKFH5kPsYiGWldymIxVuIj81Hl3mcx8hhSY8v6jbcTa0z+hfGCzSpKkAcFHIMKpfRm8PRe0msUwjYPO0Bpo5M+wD4Y/eRP4poanIdgahxvyH4pQcTMXeDcb6K7ne6bsnMbNq0ux9ZQemW9idrbhN3tHBsU/p/VniqzJhLdtcCZzluU9Z6kJpbmETfk7AwHkwzJA2bWZFrsQnF5xjC6Zfz71SC2M6JHAlKWKXx830L12KgNhhoN42gqNRzrqdct5TrdPqhzm6pjHb2rgo6Kk627a6EWyBv0pDbKM0vpwGJLqdMeYY1gINH68TYW2nkDQPWB/l41QgeFDRe3OqnxNyRSm3uqo7PkO30/iKXM3FujhcTyFNbURz3kBrnbVKXhAYCaEIQWM/c129t7Lgz5bXOjY0YPmoTBdrjHjrgH40X1PeC2tFgzjS5BkzAhkgDxpjEtjAB1EFSt4gLtFcsMXXwR1JS0sbnyD3mHHuhS1HVmomO+Py/5++pgfddoSEzaed2RaVQlh7rRNI9wDoRJ0V5NKxeohtsOtPEFbUI7MBENRPaPgLubW0/xsaF99SnL3WgIpfHGnzl233oazh/2i236JuWsu5ZxpiWZEz5nelaelmruHpKagfF5VE6JyikD6po3PmLw4ZzBCmzeCtYbo2wpvFSG8szUmuWu1b6oO/hGUZ0byUCS0KUI7q0l1HuXQ0szZ3nQDVqsaTSG1njPHrEl+W4M/0pT6N8Dvv0CqekG8xoZAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=15492818c32a075078b65b2ed40131a9^sys_idNOT IN25496818c32a075078b65b2ed4013144,a9496818c32a075078b65b2ed4013142"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes>timeFromCreateToActivate=20000</attributes>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Placement Drive Published Notification">15492818c32a075078b65b2ed40131a9</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>97f2a735-a5ce-4e71-8d22-076b3b52c868</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:28:05</sys_created_on>
+        <sys_id>25496818c32a075078b65b2ed4013144</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:28:05</sys_updated_on>
+        <ui_id>7716f824-5764-4772-86c4-0408600c3f88</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=25496818c32a075078b65b2ed4013144"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes>timeFromCreateToActivate=20000</attributes>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Placement Drive Published Notification">15492818c32a075078b65b2ed40131a9</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:28:05</sys_created_on>
+        <sys_id>a9496818c32a075078b65b2ed4013142</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:28:05</sys_updated_on>
+        <ui_id>a2796868-1a89-4705-afe7-86f2e399ccb8</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VXW2+bMBT+K5GfUQQhSdO+Ta0qTVpbqa360k2WAZNYM4bZJpdG+e87toGwhPSypVKrPXKu3zn+zrF5XCNBMorOUJyLhGmWC4U8NCe8NEISazan30vfDxMtQeShhKmCk9XDYYuCSAipqURnaxTPGE8kFejs8YeHWAIuk3To+yQYTU7AKfT98TiMSRBF4TiO/GjkQwhOIsrB9LwNqguoXhWdsm9dAXKZGFCBh+hSU5FQQJMSrqiHMiISonO5aiSSkuRG8K1gxoSGiMgYLxV7grxQh28sUwoVxtRpm09ctcqJ0wuiyR20KNalrEzjWc5iqlxvEpqSkuvztswZ3BSmAueiScRr75yXmbh2XUFNgPpkQFIqAEELU6rBbs4HgNzN8sVtDfKSCduUqkiex4Q3X0RryaJSGzhrRDnNIA7OSFEwMcWFzOfMOgOUrD/l8NFPeb6AnIpNRd9wIxd9aCzpX4L8woofiGSmiCsIA84bD6mVOudEqW0p0EP8qzRIXGFVCdh2wbXA+MWSFfqLZWCFeeM1hHZmWy4vcXA6CQeTExwXOlNY6dK2ZY/Shw3/jdnDqMXs+wrdDtiKz/YTW92ffLZuvWunqPjsH43Pk8/E5qqMD0ZnAMQ4MAS7I1R5KW0r5zjmpbIKSYRysf6C/C/zXuVSY8ujLfetjKi4Y3/3dN57egW3/ee39mmL23eQrXfvEHSAqne2ZcPuvq6FFbfDo3E7HByH2+umzKZ1HV2uR9OcS23/ZOzJrj2Qq+UQbLpm5005g7fmHGz2ZzN803C26eU0FwdYduQZThOcMsoTzARnwm5O9wZ5t+FO8Axcq3zYTSJesGRK9TZ7bZXkekH4zy59xThcH5Qt7132AUwAllTBobRfdiPf318GTvjSJhg+uwnGQWsTXJFl77bJ3Qmo2gYwsHRqW9xeB18bacXV4RHfbh/2rgt8dzidoxR4TvspbsN3u99cB/cZ/Ar6xifPXmSjFn1vDOl60WrnHmuSV9x1K6jjtXZpFDuvtcH/+Vr7kP8e3qEL5Mg/JT9+A1y1uDNnDwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a9496818c32a075078b65b2ed4013142"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=15492818c32a075078b65b2ed40131a9"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=15492818c32a075078b65b2ed40131a9^sys_idNOT INa1496818c32a075078b65b2ed4013140"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes>timeFromCreateToActivate=20000</attributes>
+        <block display_value="">11492818c32a075078b65b2ed401311c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Placement Drive Published Notification">15492818c32a075078b65b2ed40131a9</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:28:05</sys_created_on>
+        <sys_id>a1496818c32a075078b65b2ed4013140</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:13</sys_updated_on>
+        <ui_id>97f2a735-a5ce-4e71-8d22-076b3b52c868</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51Ty27bMBD8F55tQY9UlnwLEgQI0DaAE+RSBMaKXNlEKVIlKTuq4H/v0nokyLEnaYe7szMjamCm823n3Yu5dU4eNNv+elsxqQNG7wPT0CDbMumxcWzFTqC6UA8DpJsyL/JinUBRrm828bc11LhZF3mdYlaWnFdFtENurHCXC40K6VoF/ev/M7RgSY1Hy7YD40ephMVZsSDKpBR1mcQlz9I8S+M4LW6SKs+qJBUZoMiJQkGFilofJz9f7Pm+DaUdl07A92lmt6D0CCLSeMXw3aMWSOtrUA5XrAEtwBvbs623HQEWQTxp1S8dR6k90bHQ++7kX9qYxHForJEMcRwPl3I/JTfC9T14eCZq7js7tfKjkRzdGIXAGjrl7z5jY8NT66XR44iHSs3TRnWN/jkmwRaC+UMR0jkSgW0wGqRPPurnoznvZpUPUl9DmQ6V4aCWCry3sup80DMwVNgQ0b6BtpX6sG+tOcnrMGlpooOiIqqVOdPScCkj4EF4RLlC9ED4/RV+BSuDix9EQ8OXFXO9u1Pg3IcXCnH/pwtKRmeTh/0YQxjhVrb+lhaccJJ7eQv3fOReMuXSkYSXgD3Of0c46OkGSf4ZOhv7O4j/wC7/AMruuSNnAwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=15492818c32a075078b65b2ed40131a9"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=15492818c32a075078b65b2ed40131a9"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_15492818c32a075078b65b2ed40131a9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:12</sys_created_on>
+        <sys_id>0f6da414c36a075078b65b2ed401312e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CPTMS" source="x_1983287_cptms">a9b45894c366075078b65b2ed40131b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:12</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_15492818c32a075078b65b2ed40131a9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:12</sys_created_on>
+        <sys_id>766d6414c36a075078b65b2ed40131fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CPTMS" source="x_1983287_cptms">a9b45894c366075078b65b2ed40131b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:12</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_15492818c32a075078b65b2ed40131a9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:12</sys_created_on>
+        <sys_id>8b6da414c36a075078b65b2ed4013115</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CPTMS" source="x_1983287_cptms">a9b45894c366075078b65b2ed40131b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:12</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_15492818c32a075078b65b2ed40131a9"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_15492818c32a075078b65b2ed40131a9"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>c5d34a75206d4a1aa9950cfc2032b1b4</sys_id>
+        <latest_snapshot>15492818c32a075078b65b2ed40131a9</latest_snapshot>
+        <compiler_build/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=c5d34a75206d4a1aa9950cfc2032b1b4^sys_idNOT IN2d496818c32a075078b65b2ed40131ac"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerUniqueChange</binding_strategy>
+        <plan/>
+        <plan_id>c5d34a75206d4a1aa9950cfc2032b1b4</plan_id>
+        <snapshot>15492818c32a075078b65b2ed40131a9</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:28:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2d496818c32a075078b65b2ed40131ac</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:13</sys_updated_on>
+        <trigger display_value="">136de414c36a075078b65b2ed401311f</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=c5d34a75206d4a1aa9950cfc2032b1b4"/>
+</record_update>

@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>timeFromCreateToActivate=4175000</attributes>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Sends an enrollment confirmation email to the student when a new enrollment record is created with status Enrolled.</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source>fluent</generation_source>
+        <internal_name>training_batch_enrollment_confirmation</internal_name>
+        <label_cache>[{"name":"Created_1.current.batch.batch_code","label":"Trigger - Record Created➛x_1983287_cptms_enroll Record➛Batch➛Batch Code","type":"string","base_type":"string","usedInstances":{"eded27bb-04df-4406-93d3-92e0e84222ab":["ah_subject"]},"attributes":{}},{"name":"Created_1.current","label":"Trigger - Record Created➛x_1983287_cptms_enroll Record","type":"reference","base_type":"reference","usedInstances":{"eded27bb-04df-4406-93d3-92e0e84222ab":["record"]},"attributes":{}},{"name":"Created_1.current.student.student_user.email","label":"Trigger - Record Created➛x_1983287_cptms_enroll Record➛Student➛Student User➛Email","type":"string","base_type":"string","usedInstances":{"eded27bb-04df-4406-93d3-92e0e84222ab":["ah_to"]},"attributes":{}}]</label_cache>
+        <master_snapshot>678d181cc3a6075078b65b2ed40131e9</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Training Batch Enrollment Confirmation</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>0a6de014c36a075078b65b2ed40131be</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 16:36:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>83e2daab6abd4a5694a47e176a3e0494</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Training Batch Enrollment Confirmation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CPTMS" source="x_1983287_cptms">a9b45894c366075078b65b2ed40131b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name>sys_hub_flow_83e2daab6abd4a5694a47e176a3e0494</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:08</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=83e2daab6abd4a5694a47e176a3e0494"/>
+    <sys_variable_value action="delete_multiple" query="document_key=83e2daab6abd4a5694a47e176a3e0494"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1983287_cptms_enroll">status=enrolled<item endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="enrolled"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0a6de014c36a075078b65b2ed40131be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:08</sys_updated_on>
+        <table>x_1983287_cptms_enroll</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>83e2daab6abd4a5694a47e176a3e0494</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:08</sys_created_on>
+        <sys_id>066de014c36a075078b65b2ed40131bf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:08</sys_updated_on>
+        <trigger display_value="">0a6de014c36a075078b65b2ed40131be</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=83e2daab6abd4a5694a47e176a3e0494^sys_idNOT IN066de014c36a075078b65b2ed40131bf"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=83e2daab6abd4a5694a47e176a3e0494"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=83e2daab6abd4a5694a47e176a3e0494"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=83e2daab6abd4a5694a47e176a3e0494^sys_idNOT IN296da014c36a075078b65b2ed40131a5,ad6da014c36a075078b65b2ed40131b6"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,timeFromCreateToActivate=20000,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Training Batch Enrollment Confirmation">83e2daab6abd4a5694a47e176a3e0494</model>
+        <model_id>83e2daab6abd4a5694a47e176a3e0494</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_83e2daab6abd4a5694a47e176a3e0494</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:06</sys_created_on>
+        <sys_id>296da014c36a075078b65b2ed40131a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=296da014c36a075078b65b2ed40131a5"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Training Batch Enrollment Confirmation">83e2daab6abd4a5694a47e176a3e0494</model>
+        <model_id>83e2daab6abd4a5694a47e176a3e0494</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_83e2daab6abd4a5694a47e176a3e0494</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:06</sys_created_on>
+        <sys_id>ad6da014c36a075078b65b2ed40131b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=ad6da014c36a075078b65b2ed40131b6"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=83e2daab6abd4a5694a47e176a3e0494"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=83e2daab6abd4a5694a47e176a3e0494"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=83e2daab6abd4a5694a47e176a3e0494^sys_idNOT INfbf75f3f091746f281ef37d279f489ae"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Training Batch Enrollment Confirmation">83e2daab6abd4a5694a47e176a3e0494</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 16:36:32</sys_created_on>
+        <sys_id>fbf75f3f091746f281ef37d279f489ae</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:07</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+1XTW8TMRD9K9aeQApSSw+U3oBSKVKhUlvgUKqVs55NLBw72LNJlir/nfF+JO5m06ZtFhDqKfHY63kz8549vrqJ0MrhEGxfO+Q6gYvc9UV0FEW9SPEBKPp7yQcKaCw1gtVcXeYTIDN6c6z52M8JmIAWoLH8NBkZmcCpdDS+uu5FY64FR2Pz6AhtBr0otWZ8CeOJ4kh7pVw5MhorwEZH+3t7vajYt3JCG065yvx4Hu+/PTx4ffgmTiY4djFoa5TyAKSjzfKv961LRlIJC7rENeGW/KD3erMWbwMCtoRdISa8MEefALEMJgi5sljg4kyrPFgyd/IXFN9nDuIgidWK9GJkZueQAiFO4ETqwl01qUzC1XLEkSo5yBAcxbJYLDNyIkFVBXWJlRN8l6Cc1klf9LZhwHmm2ZlmH6sYWZEht06Jsuz30OGGooKfmQ+oiDyta+aZQYvT08Cr0SzJLEWPjPLJ6iwzrBGk/TEfQumG9lWQYFCE9IsLR5+kc1IPg9g3QCnm17GoPARUE+MpEK7biLKtOGymY6PjJfVWMqnxN1RRm7cQwcaSb/SNDQ78q9qIuJh6nouach2I5dsINLsAKrXxv4i+5DuWy8DgqEnR1Fj2nuys7z3xAnwhnM9GvwptFbbuFKSJHHLlMATq68xqtBuAdYZrG0y0tWW7B/Vkrc+IVbFbsml6mwgNrVfWLaW+gbCbnT+rPVCdMjPiy64FznW+pm/vSWqSdM4SQ87m2JlSBjz5MbQm02ITitUK9kJAyjOFL7u7ko2Fu+HcXvE3heoR0ekXajRMZlOp4dyWel1RrtXtszrLVH0wWkgsj+6mNusp96DnywPZkAQAai4QWszc92xv70CU7xJoYcWGVVvwIwy6BQa2xN8ZP6rX3mPpMeMaXYwm5kLEAeLlY2FsBKjjoHoVJ0gGkwxdtAhqS/3q8jnXUctXdA4d9Xtt1wE1K/4qoKTbzg5eoyE2aWuzJFNWJYdeCIOc4QgIk6JjiHYuUHXZYPqCNqEdG0YTzP4RcLtp6DySlq6uLHfjUCiND+npGoy8x/nzvdGWvkKZa2oeKikgVuXc7i+QggcBtNbKVd5rzqwT5jFsqcK9yyG2pOA/5Mr1b0TNha8gFQAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=83e2daab6abd4a5694a47e176a3e0494^sys_idNOT INeded27bb04df440693d392e0e84222ab"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="">c1806bf4a70323008299b39f087901cb</action_type_parent>
+        <attributes>timeFromCreateToActivate=20000</attributes>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Training Batch Enrollment Confirmation">83e2daab6abd4a5694a47e176a3e0494</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 16:36:32</sys_created_on>
+        <sys_id>eded27bb04df440693d392e0e84222ab</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:07</sys_updated_on>
+        <ui_id>eded27bb-04df-4406-93d3-92e0e84222ab</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1ZbU/jOBD+K1ak+9YtaQstlE9LWXQr7Zu2aE+nZRU5ttP41olztkPpIf77jWOnpCUqFHZvgeML1BN7PDN5nhl78vUyyHHGgnFgcCxYVA06wTkWpRVeRL2D/UF/fxSRwmQ6YrmSQsAEynUh8OLLbfMKrECjYSoYXwYk5YIqlgfjr986AaewEJaFwzjZxaNw0B+E4X7/4CAeHCTh/ugg7NFdUCFwzARMPbUGwrjNXrMoWmXvmmvRB/dAKmrt6XUCdmFYThkYkmChWSfIcE6xkWqxlCiG6cdcgMCoEsYpz41VmDJksJoxgxQjoBEZb16GLzT/B6zZD+3qhIHDxBoXNIaRj58TJ8fY4CnoJ6ZUfipJJSdMu1BRluBSmElT5iZ8LAyXuVviLHCrpSiz/IOLVLBUUL8ukJQajGCFdd865L1Npqmcf66tPOF5FSn/UEiCxXKEjVE8Lo215zJggmWgKMpwUfB8FhVKnvNqMdiSdWcCBt1EyDlsqvks72JiDe9CtHH3BOTHlfgLVtx68R7UwGIAiY40Ubyofas2D646gV7oicBaX/sIwY3+Lq2FzmPvW+TCY5dUil7DxufMu3HVWeJ/jgGlGVbfI5ZhLhok6N3Eu8XCHdAdDodxPIz3RoNrdB+QhI7iZIhHZNBA99uciJIy9EdtxjXSb1rm4R5LKRjO17EOtu2cVHFaYr2/Jda9wIPdgQwZieC1iAXCaGmSFRrgQmUZ/MIGcY00xL2LTiXi3qvGig5ayBJlpTYwzcCTFRp1mwzafbwM8gDw0uNWdDwJiv0MKuE00mX8FyOmwaJThXkOdqMjbEiK3lQVwjqEJjJPOGCjAtkrdHk5ASAaRqNel5RKWSzFdo37GxFJ2dXVTU7++A1uo/ce3VS8GGnQe7qMR1uMPJ81vO58tkbnaS30VB5uprKrUjeY3KhK4eNl1f+cNLGkiwZjzsowHJC0X/1nd4O3W7NTLzrzgsINjxlWaGpKa1fHTy1aZ/4JOTrF5wzFjOVIlwTer05KAdnfne0YheRus3dtlmMQOmIQNIQVs2le+cmVmZQZqBF63L5vBRKkzUKwSkDPoLxZxL8CzAhcaDZG9a9DNOfUpGPUC8PfDs+CNU3Kj92IriotMKVg7hjtFxeHKJG5eTVnfJaaMYqloEttLsoTSAW1wYbeWW+t5BOUZ81QRa+6Ugqef4fgNQLjKl/rLjtLZ36oc5+UnEFqe4BnU8Za3u1/6cMUzg0GQYZ6yAv69W68yenTd2IiAcA8tyXoF/mxU+WP1lTmSUgEJ9+XDIS8ZvMUcPKcs7nLVVAQCgHlvsUIf5Bd5jmkScpoKVgHFY5LMCORPgl3ENRjULcMCvzODVSW7sace8S0TQYzrKj22TlWO2vZ/z3O8ayqaeiU4WxV4c1D0UsN2a6GOD22EK8InmVJefoF5VmUk2dQTJ5HKfHDdfI/29KCtq0tt92H8cb7cNJv3IeP3FXnxt3H34RTk4m1e/Dvp+/fXd+CR/draC2vwcO9vcHw5R784P5sMad9qmRReN+q1tfPuB67ita4Hbd0cdq6QneA7e5G2BK68g2i6lV+ro1ZN87Dl0pSVuHmdA3Fx/4Jent8DebwQd3Z11pLwiESutGJnXOTwsmqpak66K/CHtIPrzDWDv+3148fAQ1cd2sLFiRTOK6S9IQzYV91XmZxhdtVdhDI4ypaw6Tv4j6WDlLj29ZdeklGbuZKV7sjfP0/gkirbgWeNhrdQ8Ot3dPNn/5wk3ZypVZUvm3TMx289EwfQa2gTPCMV4D4eXUC4EHIvcoA3YhHFjbwOJms4LHacBs87j7w9PICyCcFyPieiOxt/r40bJ6n1yAZb43JvRdMPnNMfvsXh/xl0e0jAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=eded27bb04df440693d392e0e84222ab"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=83e2daab6abd4a5694a47e176a3e0494"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=83e2daab6abd4a5694a47e176a3e0494"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=83e2daab6abd4a5694a47e176a3e0494"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=83e2daab6abd4a5694a47e176a3e0494"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_83e2daab6abd4a5694a47e176a3e0494</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:06</sys_created_on>
+        <sys_id>656da014c36a075078b65b2ed40131b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CPTMS" source="x_1983287_cptms">a9b45894c366075078b65b2ed40131b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_83e2daab6abd4a5694a47e176a3e0494</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:06</sys_created_on>
+        <sys_id>a96da014c36a075078b65b2ed40131ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CPTMS" source="x_1983287_cptms">a9b45894c366075078b65b2ed40131b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_83e2daab6abd4a5694a47e176a3e0494"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_83e2daab6abd4a5694a47e176a3e0494"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>timeFromCreateToActivate=20000</attributes>
+        <authored_on_release_version>-1</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Sends an enrollment confirmation email to the student when a new enrollment record is created with status Enrolled.</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>training_batch_enrollment_confirmation</internal_name>
+        <label_cache>[{"name":"Created_1.current.batch.batch_code","label":"Trigger - Record Created➛x_1983287_cptms_enroll Record➛Batch➛Batch Code","type":"string","base_type":"string","usedInstances":{"eded27bb-04df-4406-93d3-92e0e84222ab":["ah_subject"]},"attributes":{}},{"name":"Created_1.current","label":"Trigger - Record Created➛x_1983287_cptms_enroll Record","type":"reference","base_type":"reference","usedInstances":{"eded27bb-04df-4406-93d3-92e0e84222ab":["record"]},"attributes":{}},{"name":"Created_1.current.student.student_user.email","label":"Trigger - Record Created➛x_1983287_cptms_enroll Record➛Student➛Student User➛Email","type":"string","base_type":"string","usedInstances":{"eded27bb-04df-4406-93d3-92e0e84222ab":["ah_to"]},"attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>Training Batch Enrollment Confirmation</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Training Batch Enrollment Confirmation">83e2daab6abd4a5694a47e176a3e0494</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 16:36:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>678d181cc3a6075078b65b2ed40131e9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:08</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=678d181cc3a6075078b65b2ed40131e9"/>
+    <sys_variable_value action="delete_multiple" query="document_key=678d181cc3a6075078b65b2ed40131e9"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=678d181cc3a6075078b65b2ed40131e9"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=678d181cc3a6075078b65b2ed40131e9^sys_idNOT INab8d181cc3a6075078b65b2ed40131eb"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>678d181cc3a6075078b65b2ed40131e9</id>
+        <name>Training Batch Enrollment Confirmation</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 16:36:53</sys_created_on>
+        <sys_id>ab8d181cc3a6075078b65b2ed40131eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 16:36:53</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=ab8d181cc3a6075078b65b2ed40131eb"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=678d181cc3a6075078b65b2ed40131e9^sys_idNOT IN08496418c32a075078b65b2ed401315f,80496418c32a075078b65b2ed4013137"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Training Batch Enrollment Confirmation">678d181cc3a6075078b65b2ed40131e9</model>
+        <model_id>678d181cc3a6075078b65b2ed40131e9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_678d181cc3a6075078b65b2ed40131e9</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:27:59</sys_created_on>
+        <sys_id>08496418c32a075078b65b2ed401315f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:27:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=08496418c32a075078b65b2ed401315f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,timeFromCreateToActivate=20000,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Training Batch Enrollment Confirmation">678d181cc3a6075078b65b2ed40131e9</model>
+        <model_id>678d181cc3a6075078b65b2ed40131e9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_678d181cc3a6075078b65b2ed40131e9</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:27:59</sys_created_on>
+        <sys_id>80496418c32a075078b65b2ed4013137</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:27:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=80496418c32a075078b65b2ed4013137"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=678d181cc3a6075078b65b2ed40131e9"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=678d181cc3a6075078b65b2ed40131e9"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=678d181cc3a6075078b65b2ed40131e9^sys_idNOT IN738d581cc3a6075078b65b2ed4013120"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Training Batch Enrollment Confirmation">678d181cc3a6075078b65b2ed40131e9</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 16:36:54</sys_created_on>
+        <sys_id>738d581cc3a6075078b65b2ed4013120</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 16:36:54</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+1XTW8TMRD9K9aeQApSSw+U3oBSKVKhUlvgUKqVs55NLBw72LNJlir/nfF+JO5m06ZtFhDqKfHY63kz8549vrqJ0MrhEGxfO+Q6gYvc9UV0FEW9SPEBKPp7yQcKaCw1gtVcXeYTIDN6c6z52M8JmIAWoLH8NBkZmcCpdDS+uu5FY64FR2Pz6AhtBr0otWZ8CeOJ4kh7pVw5MhorwEZH+3t7vajYt3JCG065yvx4Hu+/PTx4ffgmTiY4djFoa5TyAKSjzfKv961LRlIJC7rENeGW/KD3erMWbwMCtoRdISa8MEefALEMJgi5sljg4kyrPFgyd/IXFN9nDuIgidWK9GJkZueQAiFO4ETqwl01qUzC1XLEkSo5yBAcxbJYLDNyIkFVBXWJlRN8l6Cc1klf9LZhwHmm2ZlmH6sYWZEht06Jsuz30OGGooKfmQ+oiDyta+aZQYvT08Cr0SzJLEWPjPLJ6iwzrBGk/TEfQumG9lWQYFCE9IsLR5+kc1IPg9g3QCnm17GoPARUE+MpEK7biLKtOGymY6PjJfVWMqnxN1RRm7cQwcaSb/SNDQ78q9qIuJh6nouach2I5dsINLsAKrXxv4i+5DuWy8DgqEnR1Fj2nuys7z3xAnwhnM9GvwptFbbuFKSJHHLlMATq68xqtBuAdYZrG0y0tWW7B/Vkrc+IVbFbsml6mwgNrVfWLaW+gbCbnT+rPVCdMjPiy64FznW+pm/vSWqSdM4SQ87m2JlSBjz5MbQm02ITitUK9kJAyjOFL7u7ko2Fu+HcXvE3heoR0ekXajRMZlOp4dyWel1RrtXtszrLVH0wWkgsj+6mNusp96DnywPZkAQAai4QWszc92xv70CU7xJoYcWGVVvwIwy6BQa2xN8ZP6rX3mPpMeMaXYwm5kLEAeLlY2FsBKjjoHoVJ0gGkwxdtAhqS/3q8jnXUctXdA4d9Xtt1wE1K/4qoKTbzg5eoyE2aWuzJFNWJYdeCIOc4QgIk6JjiHYuUHXZYPqCNqEdG0YTzP4RcLtp6DySlq6uLHfjUCiND+npGoy8x/nzvdGWvkKZa2oeKikgVuXc7i+QggcBtNbKVd5rzqwT5jFsqcK9yyG2pOA/5Mr1b0TNha8gFQAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=678d181cc3a6075078b65b2ed40131e9^sys_idNOT INb38d581cc3a6075078b65b2ed401311d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes>timeFromCreateToActivate=20000</attributes>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Training Batch Enrollment Confirmation">678d181cc3a6075078b65b2ed40131e9</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 16:36:53</sys_created_on>
+        <sys_id>b38d581cc3a6075078b65b2ed401311d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:28:00</sys_updated_on>
+        <ui_id>eded27bb-04df-4406-93d3-92e0e84222ab</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1ZbU/jOBD+K1ak+9YtaQstlE9LWXQr7Zu2aE+nZRU5ttP41olztkPpIf77jWOnpCUqFHZvgeML1BN7PDN5nhl78vUyyHHGgnFgcCxYVA06wTkWpRVeRL2D/UF/fxSRwmQ6YrmSQsAEynUh8OLLbfMKrECjYSoYXwYk5YIqlgfjr986AaewEJaFwzjZxaNw0B+E4X7/4CAeHCTh/ugg7NFdUCFwzARMPbUGwrjNXrMoWmXvmmvRB/dAKmrt6XUCdmFYThkYkmChWSfIcE6xkWqxlCiG6cdcgMCoEsYpz41VmDJksJoxgxQjoBEZb16GLzT/B6zZD+3qhIHDxBoXNIaRj58TJ8fY4CnoJ6ZUfipJJSdMu1BRluBSmElT5iZ8LAyXuVviLHCrpSiz/IOLVLBUUL8ukJQajGCFdd865L1Npqmcf66tPOF5FSn/UEiCxXKEjVE8Lo215zJggmWgKMpwUfB8FhVKnvNqMdiSdWcCBt1EyDlsqvks72JiDe9CtHH3BOTHlfgLVtx68R7UwGIAiY40Ubyofas2D646gV7oicBaX/sIwY3+Lq2FzmPvW+TCY5dUil7DxufMu3HVWeJ/jgGlGVbfI5ZhLhok6N3Eu8XCHdAdDodxPIz3RoNrdB+QhI7iZIhHZNBA99uciJIy9EdtxjXSb1rm4R5LKRjO17EOtu2cVHFaYr2/Jda9wIPdgQwZieC1iAXCaGmSFRrgQmUZ/MIGcY00xL2LTiXi3qvGig5ayBJlpTYwzcCTFRp1mwzafbwM8gDw0uNWdDwJiv0MKuE00mX8FyOmwaJThXkOdqMjbEiK3lQVwjqEJjJPOGCjAtkrdHk5ASAaRqNel5RKWSzFdo37GxFJ2dXVTU7++A1uo/ce3VS8GGnQe7qMR1uMPJ81vO58tkbnaS30VB5uprKrUjeY3KhK4eNl1f+cNLGkiwZjzsowHJC0X/1nd4O3W7NTLzrzgsINjxlWaGpKa1fHTy1aZ/4JOTrF5wzFjOVIlwTer05KAdnfne0YheRus3dtlmMQOmIQNIQVs2le+cmVmZQZqBF63L5vBRKkzUKwSkDPoLxZxL8CzAhcaDZG9a9DNOfUpGPUC8PfDs+CNU3Kj92IriotMKVg7hjtFxeHKJG5eTVnfJaaMYqloEttLsoTSAW1wYbeWW+t5BOUZ81QRa+6Ugqef4fgNQLjKl/rLjtLZ36oc5+UnEFqe4BnU8Za3u1/6cMUzg0GQYZ6yAv69W68yenTd2IiAcA8tyXoF/mxU+WP1lTmSUgEJ9+XDIS8ZvMUcPKcs7nLVVAQCgHlvsUIf5Bd5jmkScpoKVgHFY5LMCORPgl3ENRjULcMCvzODVSW7sace8S0TQYzrKj22TlWO2vZ/z3O8ayqaeiU4WxV4c1D0UsN2a6GOD22EK8InmVJefoF5VmUk2dQTJ5HKfHDdfI/29KCtq0tt92H8cb7cNJv3IeP3FXnxt3H34RTk4m1e/Dvp+/fXd+CR/draC2vwcO9vcHw5R784P5sMad9qmRReN+q1tfPuB67ita4Hbd0cdq6QneA7e5G2BK68g2i6lV+ro1ZN87Dl0pSVuHmdA3Fx/4Jent8DebwQd3Z11pLwiESutGJnXOTwsmqpak66K/CHtIPrzDWDv+3148fAQ1cd2sLFiRTOK6S9IQzYV91XmZxhdtVdhDI4ypaw6Tv4j6WDlLj29ZdeklGbuZKV7sjfP0/gkirbgWeNhrdQ8Ot3dPNn/5wk3ZypVZUvm3TMx289EwfQa2gTPCMV4D4eXUC4EHIvcoA3YhHFjbwOJms4LHacBs87j7w9PICyCcFyPieiOxt/r40bJ6n1yAZb43JvRdMPnNMfvsXh/xl0e0jAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b38d581cc3a6075078b65b2ed401311d"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=678d181cc3a6075078b65b2ed40131e9"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=678d181cc3a6075078b65b2ed40131e9"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=678d181cc3a6075078b65b2ed40131e9"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=678d181cc3a6075078b65b2ed40131e9"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_678d181cc3a6075078b65b2ed40131e9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:07</sys_created_on>
+        <sys_id>756de014c36a075078b65b2ed4013136</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CPTMS" source="x_1983287_cptms">a9b45894c366075078b65b2ed40131b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_678d181cc3a6075078b65b2ed40131e9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 17:46:07</sys_created_on>
+        <sys_id>756de014c36a075078b65b2ed4013140</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CPTMS" source="x_1983287_cptms">a9b45894c366075078b65b2ed40131b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CPTMS">a9b45894c366075078b65b2ed40131b1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_678d181cc3a6075078b65b2ed40131e9"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_678d181cc3a6075078b65b2ed40131e9"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>83e2daab6abd4a5694a47e176a3e0494</sys_id>
+        <latest_snapshot>678d181cc3a6075078b65b2ed40131e9</latest_snapshot>
+        <compiler_build/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=83e2daab6abd4a5694a47e176a3e0494^sys_idNOT INb38d581cc3a6075078b65b2ed4013141"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan/>
+        <plan_id>83e2daab6abd4a5694a47e176a3e0494</plan_id>
+        <snapshot>678d181cc3a6075078b65b2ed40131e9</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-02 16:36:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b38d581cc3a6075078b65b2ed4013141</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-02 17:46:08</sys_updated_on>
+        <trigger display_value="">0a6de014c36a075078b65b2ed40131be</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=83e2daab6abd4a5694a47e176a3e0494"/>
+</record_update>
