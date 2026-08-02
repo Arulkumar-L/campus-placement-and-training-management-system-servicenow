@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="c247541cc366075078b65b2ed4013112" label="Student Profile" max_length="40" name="x_1983287_cptms_student" type="collection">
+        <element label="Student User" mandatory="true" max_length="32" name="student_user" reference="sys_user" type="reference" unique="true"/>
+        <element label="CGPA" max_length="20" name="cgpa" type="decimal"/>
+        <element label="Degree" mandatory="true" max_length="40" name="degree" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="B.Tech" sequence="2" value="btech"/>
+                <element inactive_on_update="false" label="M.Tech" sequence="4" value="mtech"/>
+                <element inactive_on_update="false" label="MCA" sequence="5" value="mca"/>
+                <element inactive_on_update="false" label="M.E." sequence="3" value="me"/>
+                <element inactive_on_update="false" label="MBA" sequence="6" value="mba"/>
+                <element inactive_on_update="false" label="B.E." sequence="1" value="be"/>
+            </choice>
+        </element>
+        <element label="Community" max_length="40" name="community" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="ST" sequence="4" value="st"/>
+                <element inactive_on_update="false" label="General" sequence="1" value="general"/>
+                <element inactive_on_update="false" label="SC" sequence="3" value="sc"/>
+                <element inactive_on_update="false" label="OBC" sequence="2" value="obc"/>
+                <element inactive_on_update="false" label="Other" sequence="5" value="other"/>
+            </choice>
+        </element>
+        <element label="Mother Name" max_length="100" name="mother_name" type="string"/>
+        <element default="0" label="Readiness Score" max_length="40" name="readiness_score" read_only="true" read_only_option="instance_configured" type="integer"/>
+        <element label="LinkedIn URL" max_length="1024" name="linkedin_url" type="url"/>
+        <element label="Parent Contact" max_length="40" name="parent_contact" type="string"/>
+        <element default="0" label="Accepted Offers Count" max_length="40" name="accepted_offers_count" type="integer"/>
+        <element label="Date of Birth" max_length="40" name="date_of_birth" type="glide_date"/>
+        <element label="UG Percentage" max_length="20" name="ug_percentage" type="decimal"/>
+        <element label="Department" mandatory="true" max_length="32" name="department" reference="x_1983287_cptms_dept" type="reference"/>
+        <element label="Student Mobile" max_length="40" name="student_mobile" type="string"/>
+        <element default="unplaced" label="Placement Status" max_length="40" name="placement_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Unplaced" sequence="1" value="unplaced"/>
+                <element inactive_on_update="false" label="Maximum Offers Reached" sequence="3" value="max_offers"/>
+                <element inactive_on_update="false" label="Higher Studies" sequence="4" value="higher_studies"/>
+                <element inactive_on_update="false" label="Placed" sequence="2" value="placed"/>
+            </choice>
+        </element>
+        <element label="Father Name" max_length="100" name="father_name" type="string"/>
+        <element label="GitHub URL" max_length="1024" name="github_url" type="url"/>
+        <element label="Blood Group" max_length="40" name="blood_group" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="B-" sequence="4" value="b_neg"/>
+                <element inactive_on_update="false" label="O-" sequence="8" value="o_neg"/>
+                <element inactive_on_update="false" label="B+" sequence="3" value="b_pos"/>
+                <element inactive_on_update="false" label="A-" sequence="2" value="a_neg"/>
+                <element inactive_on_update="false" label="AB+" sequence="5" value="ab_pos"/>
+                <element inactive_on_update="false" label="O+" sequence="7" value="o_pos"/>
+                <element inactive_on_update="false" label="A+" sequence="1" value="a_pos"/>
+                <element inactive_on_update="false" label="AB-" sequence="6" value="ab_neg"/>
+            </choice>
+        </element>
+        <element label="Gender" max_length="40" name="gender" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Other" sequence="3" value="other"/>
+                <element inactive_on_update="false" label="Male" sequence="1" value="male"/>
+                <element inactive_on_update="false" label="Female" sequence="2" value="female"/>
+            </choice>
+        </element>
+        <element default="0" label="Standing Arrears" max_length="40" name="standing_arrears" type="integer"/>
+        <element label="12th Percentage" max_length="20" name="twelfth_percentage" type="decimal"/>
+        <element label="Address" max_length="500" name="address" type="string"/>
+        <element label="Mother Occupation" max_length="100" name="mother_occupation" type="string"/>
+        <element label="10th Percentage" max_length="20" name="tenth_percentage" type="decimal"/>
+        <element label="Religion" max_length="50" name="religion" type="string"/>
+        <element display="true" label="Register Number" mandatory="true" max_length="30" name="register_number" type="string" unique="true"/>
+        <element default="0" label="History of Arrears" max_length="40" name="history_of_arrears" type="integer"/>
+        <element label="Personal Email" max_length="255" name="personal_email" type="email"/>
+        <element default="0" label="Profile Completion %" max_length="40" name="profile_completion_pct" read_only="true" read_only_option="instance_configured" type="integer"/>
+        <element label="Father Occupation" max_length="100" name="father_occupation" type="string"/>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <index name="index">
+            <element name="active"/>
+        </index>
+        <index name="index2">
+            <element name="cgpa"/>
+        </index>
+        <index name="index3">
+            <element name="department"/>
+        </index>
+        <index name="index4">
+            <element name="placement_status"/>
+        </index>
+        <index name="index5" unique="true">
+            <element name="register_number"/>
+        </index>
+        <index name="index6">
+            <element name="standing_arrears"/>
+        </index>
+        <index name="index7" unique="true">
+            <element name="student_user"/>
+            <element name="register_number"/>
+        </index>
+        <index name="index8">
+            <element name="student_user"/>
+        </index>
+    </element>
+</database>

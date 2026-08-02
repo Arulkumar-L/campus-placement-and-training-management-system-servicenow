@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="1747181cc366075078b65b2ed4013154" label="Announcement" max_length="40" name="x_1983287_cptms_announce" type="collection">
+        <element display="true" label="Title" mandatory="true" max_length="150" name="title" type="string"/>
+        <element default="true" label="Display on Portal" max_length="40" name="display_on_portal" type="boolean"/>
+        <element default="medium" label="Priority" max_length="40" name="priority" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="High" sequence="3" value="high"/>
+                <element inactive_on_update="false" label="Urgent" sequence="4" value="urgent"/>
+                <element inactive_on_update="false" label="Medium" sequence="2" value="medium"/>
+                <element inactive_on_update="false" label="Low" sequence="1" value="low"/>
+            </choice>
+        </element>
+        <element label="Expiry Date" max_length="40" name="expiry_date" type="glide_date"/>
+        <element default="all" label="Target Audience" mandatory="true" max_length="40" name="target_audience" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Students" sequence="2" value="students"/>
+                <element inactive_on_update="false" label="Placement Officers" sequence="4" value="placement_officers"/>
+                <element inactive_on_update="false" label="All" sequence="1" value="all"/>
+                <element inactive_on_update="false" label="Training Staff" sequence="3" value="training_staff"/>
+            </choice>
+        </element>
+        <element label="Description" mandatory="true" max_length="65536" name="description" type="html"/>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element default="javascript:gs.nowDateTime()" label="Publish Date" max_length="40" name="publish_date" type="glide_date"/>
+        <element label="Pinned" max_length="40" name="pinned" type="boolean"/>
+        <index name="index">
+            <element name="active"/>
+        </index>
+        <index name="index2">
+            <element name="priority"/>
+        </index>
+        <index name="index3">
+            <element name="publish_date"/>
+        </index>
+    </element>
+</database>

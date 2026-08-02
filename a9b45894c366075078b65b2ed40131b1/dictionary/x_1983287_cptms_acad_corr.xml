@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="1547d01cc366075078b65b2ed40131ef" label="Academic Correction Request" max_length="40" name="x_1983287_cptms_acad_corr" type="collection">
+        <element display="true" label="Field Name" mandatory="true" max_length="40" name="field_name" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="10th Percentage" sequence="4" value="tenth_percentage"/>
+                <element inactive_on_update="false" label="12th Percentage" sequence="5" value="twelfth_percentage"/>
+                <element inactive_on_update="false" label="Standing Arrears" sequence="2" value="standing_arrears"/>
+                <element inactive_on_update="false" label="CGPA" sequence="1" value="cgpa"/>
+                <element inactive_on_update="false" label="History of Arrears" sequence="3" value="history_of_arrears"/>
+            </choice>
+        </element>
+        <element label="Student" mandatory="true" max_length="32" name="student" reference="x_1983287_cptms_student" type="reference"/>
+        <element default="pending" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pending" sequence="1" value="pending"/>
+                <element inactive_on_update="false" label="Rejected" sequence="3" value="rejected"/>
+                <element inactive_on_update="false" label="Approved" sequence="2" value="approved"/>
+            </choice>
+        </element>
+        <element label="Review Remarks" max_length="500" name="review_remarks" type="string"/>
+        <element label="Reason" mandatory="true" max_length="500" name="reason" type="string"/>
+        <element label="Requested Value" mandatory="true" max_length="50" name="requested_value" type="string"/>
+        <index name="index">
+            <element name="student"/>
+        </index>
+    </element>
+</database>

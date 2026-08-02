@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="f647941cc366075078b65b2ed4013170" label="Resume" max_length="40" name="x_1983287_cptms_resume" type="collection">
+        <element default="active" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Archived" sequence="2" value="archived"/>
+                <element inactive_on_update="false" label="Active" sequence="1" value="active"/>
+            </choice>
+        </element>
+        <element display="true" label="Version Name" mandatory="true" max_length="100" name="version_name" type="string"/>
+        <element default="javascript:gs.nowDateTime()" label="Upload Date" max_length="40" name="upload_date" type="glide_date"/>
+        <element label="Is Default" max_length="40" name="is_default" type="boolean"/>
+        <element label="Student" mandatory="true" max_length="32" name="student" reference="x_1983287_cptms_student" type="reference"/>
+        <element default="placement" label="Resume Type" mandatory="true" max_length="40" name="resume_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Internship" sequence="3" value="internship"/>
+                <element inactive_on_update="false" label="Placement" sequence="1" value="placement"/>
+                <element inactive_on_update="false" label="General" sequence="2" value="general"/>
+            </choice>
+        </element>
+        <index name="index" unique="true">
+            <element name="student"/>
+            <element name="resume_type"/>
+            <element name="is_default"/>
+        </index>
+        <index name="index2">
+            <element name="student"/>
+        </index>
+    </element>
+</database>

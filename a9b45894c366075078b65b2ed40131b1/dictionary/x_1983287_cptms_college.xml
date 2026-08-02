@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="2747581cc366075078b65b2ed4013114" label="College" max_length="40" name="x_1983287_cptms_college" type="collection">
+        <element display="true" label="College Name" mandatory="true" max_length="100" name="college_name" type="string"/>
+        <element label="Location" max_length="100" name="location" type="string"/>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Code" mandatory="true" max_length="20" name="code" type="string" unique="true"/>
+        <element label="Website" max_length="1024" name="website" type="url"/>
+        <index name="index">
+            <element name="active"/>
+        </index>
+        <index name="index2">
+            <element name="code"/>
+        </index>
+        <index name="index3" unique="true">
+            <element name="code"/>
+        </index>
+    </element>
+</database>
