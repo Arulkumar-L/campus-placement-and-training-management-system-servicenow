@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="6647941cc366075078b65b2ed4013125" label="Student Skill" max_length="40" name="x_1983287_cptms_stu_skill" type="collection">
+        <element default="beginner" label="Skill Level" max_length="40" name="skill_level" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Advanced" sequence="3" value="advanced"/>
+                <element inactive_on_update="false" label="Beginner" sequence="1" value="beginner"/>
+                <element inactive_on_update="false" label="Intermediate" sequence="2" value="intermediate"/>
+            </choice>
+        </element>
+        <element display="true" label="Skill" mandatory="true" max_length="32" name="skill" reference="x_1983287_cptms_skill" type="reference"/>
+        <element label="Student" mandatory="true" max_length="32" name="student" reference="x_1983287_cptms_student" type="reference"/>
+        <index name="index">
+            <element name="skill"/>
+        </index>
+        <index name="index2" unique="true">
+            <element name="student"/>
+            <element name="skill"/>
+        </index>
+        <index name="index3">
+            <element name="student"/>
+        </index>
+    </element>
+</database>

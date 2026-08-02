@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="0b47d41cc366075078b65b2ed40131aa" label="Internship" max_length="40" name="x_1983287_cptms_intern" type="collection">
+        <element label="Mode" max_length="40" name="mode" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Onsite" sequence="1" value="onsite"/>
+                <element inactive_on_update="false" label="Hybrid" sequence="3" value="hybrid"/>
+                <element inactive_on_update="false" label="Remote" sequence="2" value="remote"/>
+            </choice>
+        </element>
+        <element display="true" label="Role" mandatory="true" max_length="100" name="role" type="string"/>
+        <element label="Location" max_length="100" name="location" type="string"/>
+        <element label="Description" max_length="500" name="description" type="string"/>
+        <element label="Company Name" mandatory="true" max_length="100" name="company_name" type="string"/>
+        <element label="Student" mandatory="true" max_length="32" name="student" reference="x_1983287_cptms_student" type="reference"/>
+        <element label="End Date" max_length="40" name="end_date" type="glide_date"/>
+        <element label="Start Date" max_length="40" name="start_date" type="glide_date"/>
+        <index name="index">
+            <element name="student"/>
+        </index>
+    </element>
+</database>

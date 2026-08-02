@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="f547141cc366075078b65b2ed401314f" label="Skill Master" max_length="40" name="x_1983287_cptms_skill" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Description" max_length="255" name="description" type="string"/>
+        <element label="Category" mandatory="true" max_length="40" name="category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Cloud &amp; DevOps" sequence="3" value="cloud_devops"/>
+                <element inactive_on_update="false" label="Core Engineering" sequence="6" value="core_engineering"/>
+                <element inactive_on_update="false" label="Programming" sequence="1" value="programming"/>
+                <element inactive_on_update="false" label="Soft Skills" sequence="2" value="soft_skills"/>
+                <element inactive_on_update="false" label="Web Frameworks" sequence="5" value="web_frameworks"/>
+                <element inactive_on_update="false" label="Database" sequence="4" value="database"/>
+            </choice>
+        </element>
+        <element display="true" label="Skill Name" mandatory="true" max_length="100" name="skill_name" type="string" unique="true"/>
+        <index name="index">
+            <element name="active"/>
+        </index>
+        <index name="index2">
+            <element name="category"/>
+        </index>
+        <index name="index3" unique="true">
+            <element name="skill_name"/>
+        </index>
+    </element>
+</database>

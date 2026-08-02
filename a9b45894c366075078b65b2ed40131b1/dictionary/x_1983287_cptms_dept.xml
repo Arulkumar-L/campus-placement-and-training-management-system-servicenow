@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="b547141cc366075078b65b2ed40131ae" label="Department" max_length="40" name="x_1983287_cptms_dept" type="collection">
+        <element label="Code" mandatory="true" max_length="20" name="code" type="string"/>
+        <element display="true" label="Department Name" mandatory="true" max_length="100" name="department_name" type="string"/>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="College" mandatory="true" max_length="32" name="college" reference="x_1983287_cptms_college" type="reference"/>
+        <index name="index">
+            <element name="active"/>
+        </index>
+        <index name="index2">
+            <element name="code"/>
+        </index>
+        <index name="index3" unique="true">
+            <element name="code"/>
+            <element name="college"/>
+        </index>
+        <index name="index4">
+            <element name="college"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="f247941cc366075078b65b2ed40131fc" label="Certification" max_length="40" name="x_1983287_cptms_cert" type="collection">
+        <element label="Student" mandatory="true" max_length="32" name="student" reference="x_1983287_cptms_student" type="reference"/>
+        <element label="Credential ID" max_length="100" name="credential_id" type="string"/>
+        <element label="Expiry Date" max_length="40" name="expiry_date" type="glide_date"/>
+        <element label="Issue Date" max_length="40" name="issue_date" type="glide_date"/>
+        <element label="Provider" mandatory="true" max_length="100" name="provider" type="string"/>
+        <element label="Credential URL" max_length="1024" name="credential_url" type="url"/>
+        <element display="true" label="Title" mandatory="true" max_length="150" name="title" type="string"/>
+        <index name="index">
+            <element name="student"/>
+        </index>
+    </element>
+</database>
